@@ -25,18 +25,14 @@ lincom 1.group#1.time, small
 * 1.1.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_hba1c, replace)
-graph export "margins_hba1c.png", name(margins_hba1c) width(3000) replace
 
 * 1.1.7. Model diagnostics
 capture drop fit_hba1c res_hba1c
 predict fit_hba1c, fitted
 predict res_hba1c, rstandard
 scatter res_hba1c fit_hba1c, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_hba1c, replace)
-graph export "resfit_hba1c.png", name(resfit_hba1c) width(3000) replace
 qnorm res_hba1c if time==0, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_hba1c_t0, replace)
-graph export "qnorm_hba1c_t0.png", name(qnorm_hba1c_t0) width(3000) replace
 qnorm res_hba1c if time==1, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_hba1c_t1, replace)
-graph export "qnorm_hba1c_t1.png", name(qnorm_hba1c_t1) width(3000) replace
 
 
 * 1.2. FASTING PLASMA GLUCOSE
@@ -58,18 +54,14 @@ lincom 1.group#1.time, small
 * 1.2.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_glucose, replace)
-graph export "margins_glucose.png", name(margins_glucose) width(3000) replace
 
 * 1.2.7. Model diagnostics
 capture drop fit_glucose res_glucose
 predict fit_glucose, fitted
 predict res_glucose, rstandard
 scatter res_glucose fit_glucose, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_glucose, replace)
-graph export "resfit_glucose.png", name(resfit_glucose) width(3000) replace
 qnorm res_glucose if time==0, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_glucose_t0, replace)
-graph export "qnorm_glucose_t0.png", name(qnorm_glucose_t0) width(3000) replace
 qnorm res_glucose if time==1, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_glucose_t1, replace)
-graph export "qnorm_glucose_t1.png", name(qnorm_glucose_t1) width(3000) replace
 
 
 * 1.3. C-REACTIVE PROTEIN
@@ -91,18 +83,14 @@ lincom 1.group#1.time, small
 * 1.3.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_crp, replace)
-graph export "margins_crp.png", name(margins_crp) width(3000) replace
 
 * 1.3.7. Model diagnostics
 capture drop fit_crp res_crp
 predict fit_crp, fitted
 predict res_crp, rstandard
 scatter res_crp fit_crp, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_crp, replace)
-graph export "resfit_crp.png", name(resfit_crp) width(3000) replace
 qnorm res_crp if time==0, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_crp_t0, replace)
-graph export "qnorm_crp_t0.png", name(qnorm_crp_t0) width(3000) replace
 qnorm res_crp if time==1, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_crp_t1, replace)
-graph export "qnorm_crp_t1.png", name(qnorm_crp_t1) width(3000) replace
 
 log close
 
@@ -227,18 +215,14 @@ lincom 1.group#1.time, small
 * 2.1.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_plaque, replace)
-graph export "margins_plaque.png", name(margins_plaque) width(3000) replace
 
 * 2.1.7. Model diagnostics
 capture drop fit_plaque res_plaque
 predict fit_plaque, fitted
 predict res_plaque, rstandard
 scatter res_plaque fit_plaque, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_plaque, replace)
-graph export "resfit_plaque.png", name(resfit_plaque) width(3000) replace
 qnorm res_plaque if time==0, graphregion(color(white)) plotregion(color(white)) name(qnorm_plaque_t0, replace)
-graph export "qnorm_plaque_t0.png", name(qnorm_plaque_t0) width(3000) replace
 qnorm res_plaque if time==1, graphregion(color(white)) plotregion(color(white)) name(qnorm_plaque_t1, replace)
-graph export "qnorm_plaque_t1.png", name(qnorm_plaque_t1) width(3000) replace
 
 
 * 2.2. BLEEDING ON PROBING
@@ -260,18 +244,14 @@ lincom 1.group#1.time, small
 * 2.2.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_pctbop, replace)
-graph export "margins_pctbop.png", name(margins_pctbop) width(3000) replace
 
 * 2.2.7. Model diagnostics
 capture drop fit_pctbop res_pctbop
 predict fit_pctbop, fitted
 predict res_pctbop, rstandard
 scatter res_pctbop fit_pctbop, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_pctbop, replace)
-graph export "resfit_pctbop.png", name(resfit_pctbop) width(3000) replace
 qnorm res_pctbop if time==0, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctbop_t0, replace)
-graph export "qnorm_pctbop_t0.png", name(qnorm_pctbop_t0) width(3000) replace
 qnorm res_pctbop if time==1, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctbop_t1, replace)
-graph export "qnorm_pctbop_t1.png", name(qnorm_pctbop_t1) width(3000) replace
 
 
 * 2.3. MEAN PROBING DEPTH
@@ -293,18 +273,14 @@ lincom 1.group#1.time, small
 * 2.3.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_meanpd, replace)
-graph export "margins_meanpd.png", name(margins_meanpd) width(3000) replace
 
 * 2.3.7. Model diagnostics
 capture drop fit_meanpd res_meanpd
 predict fit_meanpd, fitted
 predict res_meanpd, rstandard
 scatter res_meanpd fit_meanpd, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_meanpd, replace)
-graph export "resfit_meanpd.png", name(resfit_meanpd) width(3000) replace
 qnorm res_meanpd if time==0, graphregion(color(white)) plotregion(color(white)) name(qnorm_meanpd_t0, replace)
-graph export "qnorm_meanpd_t0.png", name(qnorm_meanpd_t0) width(3000) replace
 qnorm res_meanpd if time==1, graphregion(color(white)) plotregion(color(white)) name(qnorm_meanpd_t1, replace)
-graph export "qnorm_meanpd_t1.png", name(qnorm_meanpd_t1) width(3000) replace
 
 
 * 2.4. MEAN CLINICAL ATTACHMENT LEVEL
@@ -326,18 +302,14 @@ lincom 1.group#1.time, small
 * 2.4.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_meancal, replace)
-graph export "margins_meancal.png", name(margins_meancal) width(3000) replace
 
 * 2.4.7. Model diagnostics
 capture drop fit_meancal res_meancal
 predict fit_meancal, fitted
 predict res_meancal, rstandard
 scatter res_meancal fit_meancal, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_meancal, replace)
-graph export "resfit_meancal.png", name(resfit_meancal) width(3000) replace
 qnorm res_meancal if time==0, graphregion(color(white)) plotregion(color(white)) name(qnorm_meancal_t0, replace)
-graph export "qnorm_meancal_t0.png", name(qnorm_meancal_t0) width(3000) replace
 qnorm res_meancal if time==1, graphregion(color(white)) plotregion(color(white)) name(qnorm_meancal_t1, replace)
-graph export "qnorm_meancal_t1.png", name(qnorm_meancal_t1) width(3000) replace
 
 
 * 2.5. SITES 4 MM
@@ -359,18 +331,14 @@ lincom 1.group#1.time, small
 * 2.5.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_pctsite4mm, replace)
-graph export "margins_pctsite4mm.png", name(margins_pctsite4mm) width(3000) replace
 
 * 2.5.7. Model diagnostics
 capture drop fit_pctsite4mm res_pctsite4mm
 predict fit_pctsite4mm, fitted
 predict res_pctsite4mm, rstandard
 scatter res_pctsite4mm fit_pctsite4mm, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_pctsite4mm, replace)
-graph export "resfit_pctsite4mm.png", name(resfit_pctsite4mm) width(3000) replace
 qnorm res_pctsite4mm if time==0, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctsite4mm_t0, replace)
-graph export "qnorm_pctsite4mm_t0.png", name(qnorm_pctsite4mm_t0) width(3000) replace
 qnorm res_pctsite4mm if time==1, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctsite4mm_t1, replace)
-graph export "qnorm_pctsite4mm_t1.png", name(qnorm_pctsite4mm_t1) width(3000) replace
 
 
 * 2.6. SITES 5 MM OR MORE
@@ -392,51 +360,43 @@ lincom 1.group#1.time, small
 * 2.6.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_pctsite5plus, replace)
-graph export "margins_pctsite5plus.png", name(margins_pctsite5plus) width(3000) replace
 
 * 2.6.7. Model diagnostics
 capture drop fit_pctsite5plus res_pctsite5plus
 predict fit_pctsite5plus, fitted
 predict res_pctsite5plus, rstandard
 scatter res_pctsite5plus fit_pctsite5plus, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_pctsite5plus, replace)
-graph export "resfit_pctsite5plus.png", name(resfit_pctsite5plus) width(3000) replace
 qnorm res_pctsite5plus if time==0, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctsite5plus_t0, replace)
-graph export "qnorm_pctsite5plus_t0.png", name(qnorm_pctsite5plus_t0) width(3000) replace
 qnorm res_pctsite5plus if time==1, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctsite5plus_t1, replace)
-graph export "qnorm_pctsite5plus_t1.png", name(qnorm_pctsite5plus_t1) width(3000) replace
 
 
 * 2.7. SITES 7 MM OR MORE
-* 2.6.1. Observed descriptive values
+* 2.7.1. Observed descriptive values
 table group time, statistic(count pctsite7plus) statistic(mean pctsite7plus) statistic(sd pctsite7plus)
 
-* 2.6.2. Constrained longitudinal data analysis
+* 2.7.2. Constrained longitudinal data analysis
 mixed pctsite7plus i.time 1.group#1.time || id:, nocons residuals(unstructured, t(time)) reml dfmethod(kroger)
 
-* 2.6.3. Estimated change in control group
+* 2.7.3. Estimated change in control group
 lincom 1.time, small
 
-* 2.6.4. Estimated change in test group
+* 2.7.4. Estimated change in test group
 lincom 1.time + 1.group#1.time, small
 
-* 2.6.5. Estimated treatment effect: Test - Control
+* 2.7.5. Estimated treatment effect: Test - Control
 lincom 1.group#1.time, small
 
-* 2.6.6. Model-estimated means and profile
+* 2.7.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_pctsite7plus, replace)
-graph export "margins_pctsite7plus.png", name(margins_pctsite7plus) width(3000) replace
 
-* 2.6.7. Model diagnostics
+* 2.7.7. Model diagnostics
 capture drop fit_pctsite7plus res_pctsite7plus
 predict fit_pctsite7plus, fitted
 predict res_pctsite7plus, rstandard
 scatter res_pctsite7plus fit_pctsite7plus, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_pctsite7plus, replace)
-graph export "resfit_pctsite7plus.png", name(resfit_pctsite7plus) width(3000) replace
 qnorm res_pctsite7plus if time==0, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctsite7plus_t0, replace)
-graph export "qnorm_pctsite7plus_t0.png", name(qnorm_pctsite7plus_t0) width(3000) replace
 qnorm res_pctsite7plus if time==1, graphregion(color(white)) plotregion(color(white)) name(qnorm_pctsite7plus_t1, replace)
-graph export "qnorm_pctsite7plus_t1.png", name(qnorm_pctsite7plus_t1) width(3000) replace
 
 log close
 
@@ -662,18 +622,14 @@ lincom 1.group#1.time, small
 * 3.1.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_tnf, replace)
-graph export "margins_tnf.png", name(margins_tnf) width(3000) replace
 
 * 3.1.7. Model diagnostics
 capture drop fit_tnf res_tnf
 predict fit_tnf, fitted
 predict res_tnf, rstandard
 scatter res_tnf fit_tnf, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_tnf, replace)
-graph export "resfit_tnf.png", name(resfit_tnf) width(3000) replace
 qnorm res_tnf if time==0, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_tnf_t0, replace)
-graph export "qnorm_tnf_t0.png", name(qnorm_tnf_t0) width(3000) replace
 qnorm res_tnf if time==1, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_tnf_t1, replace)
-graph export "qnorm_tnf_t1.png", name(qnorm_tnf_t1) width(3000) replace
 
 
 * 3.2. IL-6
@@ -695,18 +651,14 @@ lincom 1.group#1.time, small
 * 3.2.6. Model-estimated means and profile
 margins group#time
 marginsplot, plot1opts(lcolor("#384358") mcolor("#384358")) plot2opts(lcolor("#541A2E") mcolor("#541A2E")) ci1opts(lcolor("#384358")) ci2opts(lcolor("#541A2E")) graphregion(color(white)) plotregion(color(white)) name(margins_il6, replace)
-graph export "margins_il6.png", name(margins_il6) width(3000) replace
 
 * 3.2.7. Model diagnostics
 capture drop fit_il6 res_il6
 predict fit_il6, fitted
 predict res_il6, rstandard
 scatter res_il6 fit_il6, yline(0) graphregion(color(white)) plotregion(color(white)) name(resfit_il6, replace)
-graph export "resfit_il6.png", name(resfit_il6) width(3000) replace
 qnorm res_il6 if time==0, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_il6_t0, replace)
-graph export "qnorm_il6_t0.png", name(qnorm_il6_t0) width(3000) replace
 qnorm res_il6 if time==1, mcolor("#5B6E8C") rlopts(lcolor("#541A2E") lwidth(medthick)) graphregion(color(white)) plotregion(color(white)) name(qnorm_il6_t1, replace)
-graph export "qnorm_il6_t1.png", name(qnorm_il6_t1) width(3000) replace
 
 log close
 
@@ -715,7 +667,7 @@ log close
 capture log close
 log using "sensitivity_salivary_parameters.log", replace text
 
-* NECESSARY SENSITIVITY ANALYSIS DUE TO OUTLIER OBSERVATIONS ON PERIODONTAL PARAMETERS
+* NECESSARY SENSITIVITY ANALYSIS DUE TO OUTLIER OBSERVATIONS FOR SALIVARY PARAMETERS
 set more off
 capture postutil clear
 
@@ -900,8 +852,8 @@ list outcome analysis estimate se df p lb ub, sepby(outcome) noobs abbreviate(28
 export delimited using "sensitivity_salivary_parameters_results.csv", replace
 
 restore
-log close
 
+log close
 
 
 
